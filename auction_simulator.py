@@ -67,7 +67,7 @@ def FPA(items,n,m,alphas,values, debug=False):
     if debug:
         print("\nFPA:")
         print_all(n,items,alphas,values,bids,argsorted,winning_prices,revenue)
-    utilities=[alphas[i]*values[x]-winning_prices[i] for i,x in enumerate(argsorted[:m])]
+    utilities=[alphas[i]*values[argsorted[i]]-winning_prices[i] for i in range(m)]
     return utilities
     
 def SPA(items,n,m,alphas,values, debug=True):
@@ -79,7 +79,7 @@ def SPA(items,n,m,alphas,values, debug=True):
     if debug:
         print("\nSPA:")
         print_all(n,items,alphas,values,bids,argsorted,winning_prices,revenue)
-    utilities=[alphas[i]*values[x]-winning_prices[i] for i,x in enumerate(argsorted[:m])]
+    utilities=[alphas[i]*values[argsorted[i]]-winning_prices[i] for i in range(m)]
     return utilities
     ...
 def VCG(items,n,m,alphas,values, debug=False):
@@ -95,7 +95,7 @@ def VCG(items,n,m,alphas,values, debug=False):
     if debug:
         print("\nVCG:")
         print_all(n,items,alphas,values,bids,argsorted,winning_prices,revenue)
-    utilities=[alphas[i]*values[x]-winning_prices[i] for i,x in enumerate(argsorted[:m])]
+    utilities=[alphas[i]*values[argsorted[i]]-winning_prices[i] for i in range(m)]
     return utilities
     ...
     
