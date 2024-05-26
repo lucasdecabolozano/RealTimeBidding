@@ -102,6 +102,8 @@ def VCG(items,n,m,alphas,values, debug=False):
 def main(debug=False):
     items,n,m,alphas,values=prepare_auction(debug=debug)
     fpa,spa,vcg=conduct_auctions(items,n,m,alphas,values,True)
+    print()
+    print("Utilities")
     print(fpa)
     print(spa)
     print(vcg)
